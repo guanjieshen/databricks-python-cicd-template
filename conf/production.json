@@ -1,0 +1,35 @@
+{
+    "default": {
+        "jobs": [
+            {
+                "name": "repos-ci-demo-job",
+                "new_cluster": {
+                    "spark_version": "9.1.x-scala2.12",
+                    "node_type_id": "Standard_F4",
+                    "azure_attributes": {
+                        "first_on_demand": 1,
+                        "availability": "ON_DEMAND_AZURE",
+                        "spot_bid_max_price": "-1"
+                    },
+                    "num_workers": 1
+                },
+                "libraries": [],
+                "max_concurrent_runs": 1,
+                "max_retries": 0,
+                "notebook_task": {
+                    "notebook_path": "/Repos/Production/databricks-repos-ci-demo/notebooks/src/prepare-data"
+                },
+                "email_notifications": {
+                    "on_failure": [
+                        "guanjie.shen@databricks.com"
+                    ]
+                },
+                "schedule": {
+                    "quartz_cron_expression": "38 0 0 * * ?",
+                    "timezone_id": "UTC",
+                    "pause_status": "UNPAUSED"
+                }
+            }
+        ]
+    }
+}

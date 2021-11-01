@@ -1,0 +1,25 @@
+{
+    "default": {
+        "jobs": [
+            {
+                "name": "nutter-testing-suite",
+                "new_cluster": {
+                    "spark_version": "9.1.x-scala2.12",
+                    "node_type_id": "Standard_F4",
+                    "azure_attributes": {
+                        "first_on_demand": 1,
+                        "availability": "ON_DEMAND_AZURE",
+                        "spot_bid_max_price": "-1"
+                    },
+                    "num_workers": 1
+                },
+                "libraries": [],
+                "max_concurrent_runs": 1,
+                "max_retries": 0,
+                "notebook_task": {
+                    "notebook_path": "/Repos/Staging/databricks-repos-ci-demo/notebooks/tests/test-suite"
+                }
+            }
+        ]
+    }
+}
