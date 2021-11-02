@@ -17,7 +17,7 @@
                 "max_concurrent_runs": 1,
                 "max_retries": 0,
                 "notebook_task": {
-                    "notebook_path": "/Repos/Staging/databricks-repos-ci-demo/notebooks/tests/test-suite"
+                    "notebook_path": "/Repos/Staging/databricks-python-cicd-template/notebooks/tests/test-suite"
                 }
             }
         ]
