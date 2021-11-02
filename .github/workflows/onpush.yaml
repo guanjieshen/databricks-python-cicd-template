@@ -10,7 +10,7 @@ jobs:
     strategy:
       max-parallel: 4
       matrix:
-        python-version: [3.7]
+        python-version: [3.8]
         os: [ubuntu-latest]
 
     env:
@@ -44,4 +44,4 @@ jobs:
       
       - name: Deploy the code and launch integration tests
         run: |
-          dbx deploy --files-only --deployment-file=conf/staging.json
+          dbx deploy --files-only --deployment-file=conf/staging.json --no-package
