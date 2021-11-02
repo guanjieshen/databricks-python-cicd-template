@@ -44,6 +44,4 @@ jobs:
       
       - name: Deploy the code and launch integration tests
         run: |
-          databricks repos update --path=/Repos/Staging/databricks-repos-ci-demo --branch=${{ env.GITHUB_HEAD_REF_SLUG }}
           dbx deploy --files-only --no-rebuild --deployment-file=conf/staging.json --no-package
-          dbx launch --job=nutter-testing-suite --as-run-submit --trace
