@@ -2,8 +2,8 @@
     "environments": {
         "default": {
             "profile": "DEFAULT",
-            "workspace_dir": "/Shared/dbx/projects/databricks-repos-ci-demo",
-            "artifact_location": "dbfs:/dbx/databricks-repos-ci-demo"
+            "workspace_dir": "/Shared/dbx/projects/databricks-python-cicd-template",
+            "artifact_location": "dbfs:/dbx/databricks-python-cicd-template"
         }
     }
 }
